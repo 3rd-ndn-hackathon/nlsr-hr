@@ -183,9 +183,8 @@ CoordinateLsa::getData()
   corLsaData += (boost::lexical_cast<std::string>(m_lsSeqNo) + "|");
   corLsaData += (ndn::time::toIsoString(m_expirationTimePoint) + "|");
   corLsaData += (boost::lexical_cast<std::string>(m_corRad) + "|");
-  //corLsaData += (boost::lexical_cast<std::string>(m_angles) + "|"); TODO
-  for (int i = 0; i < m_angles.size(); i++) {
-    corLsaData += boost::lexical_cast<std::string>(m_angles[i]) + "|";
+  for( auto const& value: m_angles) {
+   corLsaData += boost::lexical_cast<std::string>(value) + "|";
   }
   return corLsaData;
 }
@@ -210,8 +209,9 @@ CoordinateLsa::initializeFromContent(const std::string& content)
     m_expirationTimePoint = ndn::time::fromIsoString(*tok_iter++);
     m_corRad   = boost::lexical_cast<double>(*tok_iter++);
 
-    for(int i = 0; tok_iter != tokens.end(); *tok_iter++, i++) {
-      m_angles[i] = boost::lexical_cast<double>(*tok_iter);
+    for(; tok_iter != tokens.end(); *tok_iter++) {
+      //_LOG_ERROR(boost::lexical_cast<double>(*tok_iter));
+      m_angles.push_back(boost::lexical_cast<double>(*tok_iter));
     }
 
   }
@@ -231,6 +231,12 @@ CoordinateLsa::writeLog()
   _LOG_DEBUG("  Ls Seq No: " << m_lsSeqNo);
   _LOG_DEBUG("  Ls Lifetime: " << m_expirationTimePoint);
   _LOG_DEBUG("    Hyperbolic Radius: " << m_corRad);
+  int i = 0;
+  for(auto const& value: m_angles) {
+    _LOG_DEBUG("  Hyp theta " << i << ": "<< value);
+    ++i;
+  }
+
   //_LOG_DEBUG("    Hyperbolic Theta: " << m_corTheta);
 }
 

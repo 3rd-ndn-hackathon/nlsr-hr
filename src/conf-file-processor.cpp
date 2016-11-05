@@ -541,7 +541,7 @@ ConfFileProcessor::processConfSectionHyperbolic(const ConfigSection& section)
     //boost::split(strs,line,boost::is_any_of("\t"));
 
     std::vector<std::string> angleVector;
-    boost::split(angleVector, angleString, boost::is_any_of(" "));
+    boost::split(angleVector, angleString, boost::is_any_of(","));
 
     std::vector<double> angles;
     for (int i = 0; i < angleVector.size(); i++) {

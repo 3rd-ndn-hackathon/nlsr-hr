@@ -273,7 +273,6 @@ public:
   CoordinateLsa()
     : Lsa(CoordinateLsa::TYPE_STRING)
     , m_corRad(0)
-    , m_angles(0)
   {
   }
 
