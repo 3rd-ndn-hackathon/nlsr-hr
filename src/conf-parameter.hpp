@@ -335,12 +335,12 @@ public:
   }
 
   void
-  setCorTheta(double ct)
+  setCorTheta(std::vector<double> ct)
   {
     m_corTheta = ct;
   }
 
-  double
+  std::vector<double>
   getCorTheta() const
   {
     return m_corTheta;
@@ -432,7 +432,7 @@ private:
 
   int32_t m_hyperbolicState;
   double m_corR;
-  double m_corTheta;
+  std::vector<double> m_corTheta;
 
   uint32_t m_maxFacesPerPrefix;
 

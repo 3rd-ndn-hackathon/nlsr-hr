@@ -46,7 +46,7 @@ ConfParameter::writeLog()
   _LOG_DEBUG("Max Faces Per Prefix: " << m_maxFacesPerPrefix);
   _LOG_DEBUG("Hyperbolic Routing: " << m_hyperbolicState);
   _LOG_DEBUG("Hyp R: " << m_corR);
-  _LOG_DEBUG("Hyp theta: " << m_corTheta);
+  //_LOG_DEBUG("Hyp theta: " << m_corTheta);
   _LOG_DEBUG("Log Directory: " << m_logDir);
   _LOG_DEBUG("Seq Directory: " << m_seqFileDir);
 

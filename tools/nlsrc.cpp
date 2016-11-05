@@ -296,7 +296,7 @@ Nlsrc::recordCoordinateLsa(const nlsr::tlv::CoordinateLsa& lsa)
 
   os << getLsaInfoString(lsa.getLsaInfo()) << std::endl;
 
-  os << "      angle=" << lsa.getHyperbolicAngle() << std::endl;
+  /*os << "      angle=" << lsa.getHyperbolicAngle() << std::endl;*/ //TODO: print out all the angles
   os << "      radius=" << lsa.getHyperbolicRadius() << std::endl;
 
   router.coordinateLsaString = os.str();
