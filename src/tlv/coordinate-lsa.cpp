@@ -46,15 +46,34 @@ CoordinateLsa::CoordinateLsa(const ndn::Block& block)
 
 template<ndn::encoding::Tag TAG>
 size_t
+wE(ndn::EncodingImpl<TAG>& encoder, const uint8_t* doubleBytes1) {
+    size_t tl = 0;
+    size_t dl = 10;
+
+    tl += encoder.prependByteArrayBlock(ndn::tlv::nlsr::Double, doubleBytes1, 8);
+
+    tl += encoder.prependVarNumber(dl);
+    tl += encoder.prependVarNumber(ndn::tlv::nlsr::HyperbolicAngle);
+    return tl;
+}
+
+template<ndn::encoding::Tag TAG>
+size_t
 CoordinateLsa::wireEncode(ndn::EncodingImpl<TAG>& block) const
 {
   size_t totalLength = 0;
   size_t doubleLength = 10;
 
-  const uint8_t* doubleBytes1 = reinterpret_cast<const uint8_t*>(&m_hyperbolicAngle);
-  totalLength += block.prependByteArrayBlock(ndn::tlv::nlsr::Double, doubleBytes1, 8);
-  totalLength += block.prependVarNumber(doubleLength);
-  totalLength += block.prependVarNumber(ndn::tlv::nlsr::HyperbolicAngle);
+  for (auto it = m_hyperbolicAngle.rbegin(); it != m_hyperbolicAngle.rend(); ++it) {
+    std::cout << *it << std::endl;
+    const uint8_t* doubleBytes1 = reinterpret_cast<const uint8_t*>(&*it);
+    totalLength += wE(block, doubleBytes1);
+
+    //const uint8_t* doubleBytes1 = reinterpret_cast<const uint8_t*>(&*it);
+    //totalLength += block.prependByteArrayBlock(ndn::tlv::nlsr::Double, doubleBytes1, 8);
+    //totalLength += block.prependVarNumber(doubleLength);
+    //totalLength += block.prependVarNumber(ndn::tlv::nlsr::HyperbolicAngle);
+  }
 
   const uint8_t* doubleBytes2 = reinterpret_cast<const uint8_t*>(&m_hyperbolicRadius);
   totalLength += block.prependByteArrayBlock(ndn::tlv::nlsr::Double, doubleBytes2, 8);
@@ -97,7 +116,7 @@ void
 CoordinateLsa::wireDecode(const ndn::Block& wire)
 {
   m_hyperbolicRadius = 0.0;
-  m_hyperbolicAngle = 0.0;
+  //m_hyperbolicAngle(0.0);
 
   m_wire = wire;
 
@@ -125,41 +144,49 @@ CoordinateLsa::wireDecode(const ndn::Block& wire)
     ndn::Block::element_const_iterator it = val->elements_begin();
     if (it != val->elements_end() && it->type() == ndn::tlv::nlsr::Double) {
       m_hyperbolicRadius = *reinterpret_cast<const double*>(it->value());
+
+      ++val;
     }
     else {
       throw Error("HyperbolicRadius: Missing required Double field");
     }
-
-    ++val;
   }
   else {
     throw Error("Missing required HyperbolicRadius field");
   }
 
-  if (val != m_wire.elements_end() && val->type() == ndn::tlv::nlsr::HyperbolicAngle) {
-    val->parse();
-    ndn::Block::element_const_iterator it = val->elements_begin();
-    if (it != val->elements_end() && it->type() == ndn::tlv::nlsr::Double) {
-      m_hyperbolicAngle = *reinterpret_cast<const double*>(it->value());
-    }
-    else {
-      throw Error("HyperbolicAngle: Missing required Double field");
-    }
+  std::cout << val->type() << std::endl;
 
-    ++val;
-  }
-  else {
-    throw Error("Missing required HyperbolicAngle field");
+  for(; val != wire.elements_end(); ++val) {
+    if (val->type() == ndn::tlv::nlsr::HyperbolicAngle) {
+      val->parse();
+
+      for(auto it = val->elements_begin(); it != val->elements_end(); ++it) {
+        std::cout << *reinterpret_cast<const double*>(it->value()) << std::endl;
+        if (it->type() == ndn::tlv::nlsr::Double) {
+          m_hyperbolicAngle.push_back(*reinterpret_cast<const double*>(it->value()));
+        }
+        else {
+      	  std::cout << val->type() << std::endl;
+          throw Error("HyperbolicAngle: Missing required Double field");
+        }
+      }
+       std::cout << m_hyperbolicAngle.size() << std::endl;
+     } //for
+    else {
+      break;
+    //  std::cout << val->type() << std::endl;
+    //  throw Error("Missing required HyperbolicAngle field");
+    }
   }
 }
-
 std::ostream&
 operator<<(std::ostream& os, const CoordinateLsa& coordinateLsa)
 {
   os << "CoordinateLsa("
      << coordinateLsa.getLsaInfo() << ", "
      << "HyperbolicRadius: " << coordinateLsa.getHyperbolicRadius() << ", "
-     << "HyperbolicAngle: " << coordinateLsa.getHyperbolicAngle() << ")";
+     /*<< "HyperbolicAngle: " << coordinateLsa.getHyperbolicAngle() << ")"*/;
 
   return os;
 }

@@ -33,6 +33,7 @@
 #include "name-prefix-list.hpp"
 #include "adjacent.hpp"
 #include "logger.hpp"
+#include <typeinfo>
 
 
 namespace nlsr {
@@ -136,14 +137,14 @@ NameLsa::writeLog()
 
 CoordinateLsa::CoordinateLsa(const ndn::Name& origR, uint32_t lsn,
                              const ndn::time::system_clock::TimePoint& lt,
-                             double r, double theta)
+                             double r, std::vector<double> theta)
   : Lsa(CoordinateLsa::TYPE_STRING)
 {
   m_origRouter = origR;
   m_lsSeqNo = lsn;
   m_expirationTimePoint = lt;
   m_corRad = r;
-  m_corTheta = theta;
+  m_angles = theta;
 }
 
 const ndn::Name
@@ -157,9 +158,19 @@ CoordinateLsa::getKey() const
 bool
 CoordinateLsa::isEqualContent(const CoordinateLsa& clsa)
 {
+  if (clsa.getCorTheta().size() != m_angles.size()) {
+    return false;
+  }
+
+  std::vector<double> m_angles2 = clsa.getCorTheta();
+  for (int i = 0; i < clsa.getCorTheta().size(); i++) {
+    if (std::abs(m_angles[i] - m_angles2[i]) > std::numeric_limits<double>::epsilon()) {
+      return false;
+      break;
+    }
+  }
+
   return (std::abs(m_corRad - clsa.getCorRadius()) <
-          std::numeric_limits<double>::epsilon()) &&
-         (std::abs(m_corTheta - clsa.getCorTheta()) <
           std::numeric_limits<double>::epsilon());
 }
 
@@ -173,7 +184,9 @@ CoordinateLsa::getData()
   corLsaData += (boost::lexical_cast<std::string>(m_lsSeqNo) + "|");
   corLsaData += (ndn::time::toIsoString(m_expirationTimePoint) + "|");
   corLsaData += (boost::lexical_cast<std::string>(m_corRad) + "|");
-  corLsaData += (boost::lexical_cast<std::string>(m_corTheta) + "|");
+  for( auto const& value: m_angles) {
+   corLsaData += boost::lexical_cast<std::string>(value) + "|";
+  }
   return corLsaData;
 }
 
@@ -196,9 +209,26 @@ CoordinateLsa::initializeFromContent(const std::string& content)
     m_lsSeqNo  = boost::lexical_cast<uint32_t>(*tok_iter++);
     m_expirationTimePoint = ndn::time::fromIsoString(*tok_iter++);
     m_corRad   = boost::lexical_cast<double>(*tok_iter++);
-    m_corTheta = boost::lexical_cast<double>(*tok_iter++);
+
+    while(tok_iter != tokens.end()) {
+      _LOG_ERROR(*tok_iter);
+      //double angle =
+      try
+      {
+          double value = std::stod(*tok_iter);
+      }
+      catch(std::exception& e)
+      {
+          //std::cout << "Could not convert string to double" << std::endl;
+          return true;
+      }
+      m_angles.push_back(boost::lexical_cast<double>(*tok_iter));
+      tok_iter++;
+    }
+
   }
   catch (std::exception& e) {
+    _LOG_ERROR("ldzjvnl");
     _LOG_ERROR(e.what());
     return false;
   }
@@ -214,7 +244,13 @@ CoordinateLsa::writeLog()
   _LOG_DEBUG("  Ls Seq No: " << m_lsSeqNo);
   _LOG_DEBUG("  Ls Lifetime: " << m_expirationTimePoint);
   _LOG_DEBUG("    Hyperbolic Radius: " << m_corRad);
-  _LOG_DEBUG("    Hyperbolic Theta: " << m_corTheta);
+  int i = 0;
+  for(auto const& value: m_angles) {
+    _LOG_DEBUG("  Hyp theta " << i << ": "<< value);
+    ++i;
+  }
+
+  //_LOG_DEBUG("    Hyperbolic Theta: " << m_corTheta);
 }
 
 AdjLsa::AdjLsa(const ndn::Name& origR, uint32_t lsn,

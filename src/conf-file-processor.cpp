@@ -533,11 +533,25 @@ ConfFileProcessor::processConfSectionHyperbolic(const ConfigSection& section)
      * So each router need to advertise its hyperbolic coordinates in the network
      */
     double radius = section.get<double>("radius");
-    double angle = section.get<double>("angle");
+    std::string angleString = section.get<std::string>("angle");
+    //std::cout << angle << std::endl;
+
+    //string line("test\ttest2\ttest3");
+    //  vector<string> strs;
+    //boost::split(strs,line,boost::is_any_of("\t"));
+
+    std::vector<std::string> angleVector;
+    boost::split(angleVector, angleString, boost::is_any_of(","));
+
+    std::vector<double> angles;
+    for (int i = 0; i < angleVector.size(); i++) {
+      angles.push_back(boost::lexical_cast<double>(angleVector[i]));
+    }
+
     if (!m_nlsr.getConfParameter().setCorR(radius)) {
       return false;
     }
-    m_nlsr.getConfParameter().setCorTheta(angle);
+    m_nlsr.getConfParameter().setCorTheta(angles);
   }
   catch (const std::exception& ex) {
     std::cerr << ex.what() << std::endl;

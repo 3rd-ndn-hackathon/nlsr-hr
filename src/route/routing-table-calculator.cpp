@@ -464,7 +464,7 @@ double
 HyperbolicRoutingCalculator::getHyperbolicDistance(Map& map, Lsdb& lsdb,
                                                    ndn::Name src, ndn::Name dest)
 {
-  _LOG_TRACE("Calculating hyperbolic distance from " << src << " to " << dest);
+   _LOG_TRACE("Calculating hyperbolic distance from " << src << " to " << dest);
 
   double distance = UNKNOWN_DISTANCE;
 
@@ -483,14 +483,10 @@ HyperbolicRoutingCalculator::getHyperbolicDistance(Map& map, Lsdb& lsdb,
     return UNKNOWN_DISTANCE;
   }
 
-  double srcTheta = srcLsa->getCorTheta();
-  double destTheta = destLsa->getCorTheta();
+  std::vector<double> srcTheta = srcLsa->getCorTheta();
+  std::vector<double> destTheta = destLsa->getCorTheta();
 
-  double diffTheta = fabs(srcTheta - destTheta);
-
-  if (diffTheta > MATH_PI) {
-    diffTheta = 2 * MATH_PI - diffTheta;
-  }
+  double diffTheta = get_angular_distance(srcTheta, destTheta);
 
   double srcRadius = srcLsa->getCorRadius();
   double destRadius = destLsa->getCorRadius();
@@ -498,21 +494,104 @@ HyperbolicRoutingCalculator::getHyperbolicDistance(Map& map, Lsdb& lsdb,
   if (srcRadius == UNKNOWN_RADIUS && destRadius == UNKNOWN_RADIUS) {
     return UNKNOWN_DISTANCE;
   }
-
-  if (diffTheta == 0) {
-    distance = fabs(srcRadius - destRadius);
-  }
-  else {
-    distance = acosh((cosh(srcRadius) * cosh(destRadius)) -
-                     (sinh(srcRadius) * sinh(destRadius) * cos(diffTheta)));
-  }
+  //double r_i, double r_j, double delta_theta, double zeta
+  double zeta = 1;
+  distance = get_hyperbolic_distance(srcRadius, destRadius, diffTheta, zeta);
 
   _LOG_TRACE("Distance from " << src << " to " << dest << " is " << distance);
 
   return distance;
 }
 
-void HyperbolicRoutingCalculator::addNextHop(ndn::Name dest, std::string faceUri,
+double
+HyperbolicRoutingCalculator::get_angular_distance(std::vector<double> angle_vector_i, std::vector<double> angle_vector_j) {
+    //check if two vector lengths are the same
+    assert(angle_vector_i.size() == angle_vector_j.size());
+
+    //check if all angles are within the [0, PI] and [0, 2PI] ranges
+
+    if(angle_vector_i.size() > 1){
+        for(int k = 0; k < angle_vector_i.size() - 1; k++){
+            assert(angle_vector_i[k] <= M_PI && angle_vector_i[k] > 0.0);
+            assert(angle_vector_j[k] <= M_PI && angle_vector_j[k] > 0.0);
+        }
+        assert(angle_vector_i[angle_vector_i.size()-1] <= 2.*M_PI && angle_vector_i[angle_vector_i.size()-1] > 0.0);
+        assert(angle_vector_j[angle_vector_j.size()-1] <= 2.*M_PI && angle_vector_j[angle_vector_j.size()-1] > 0.0);
+    }
+    else{
+        assert(angle_vector_i[angle_vector_i.size()-1] <= 2.*M_PI && angle_vector_i[angle_vector_i.size()-1] > 0.0);
+        assert(angle_vector_j[angle_vector_j.size()-1] <= 2.*M_PI && angle_vector_j[angle_vector_j.size()-1] > 0.0);
+    }
+
+     //delta_theta = arccos(vector_i . vector_j) -> do the inner product
+    double inner_product = 0.0;
+
+    //if d > 1
+    if(angle_vector_i.size() > 1){
+
+        double x_0_i = std::cos(angle_vector_i[0]);
+        long double x_0_j = std::cos(angle_vector_j[0]);
+
+        double x_n_i = std::sin(angle_vector_i[angle_vector_i.size() - 1]);
+        double x_n_j = std::sin(angle_vector_j[angle_vector_j.size() - 1]);
+        //do the aggregation of the last coordinates
+        for(int k = 0; k < angle_vector_i.size() - 1; k++){
+            x_n_i *= std::sin(angle_vector_i[k]);
+            x_n_j *= std::sin(angle_vector_j[k]);
+        }
+        inner_product += (x_0_i * x_0_j) + (x_n_i * x_n_j);
+
+
+        for(int m = 1; m < angle_vector_i.size(); m++){
+            //calculate euclidean coordinates given the angles and assuming R_sphere = 1
+            double x_m_i = std::cos(angle_vector_i[m]);
+            double x_m_j = std::cos(angle_vector_j[m]);
+            for(int l = 0; l < m; l++){
+                x_m_i *= std::sin(angle_vector_i[l]);
+                x_m_j *= std::sin(angle_vector_j[l]);
+            }
+            inner_product += x_m_i * x_m_j;
+        }
+
+
+    }
+
+    //if d = 1
+    else {
+        double x_0_i = std::cos(angle_vector_i[0]);
+        double x_0_j = std::cos(angle_vector_j[0]);
+
+        double x_n_i = std::sin(angle_vector_i[angle_vector_i.size() - 1]);
+        double x_n_j = std::sin(angle_vector_j[angle_vector_j.size() - 1]);
+        //do the aggregation of the last coordinates
+        for(int k = 0; k < angle_vector_i.size() - 1; k++){
+            x_n_i *= std::sin(angle_vector_i[k]);
+            x_n_j *= std::sin(angle_vector_j[k]);
+        }
+        inner_product += (x_0_i * x_0_j) + (x_n_i * x_n_j);
+    }
+
+
+    double delta_theta = std::acos(inner_product);
+
+    return delta_theta;
+}
+
+double
+HyperbolicRoutingCalculator::get_hyperbolic_distance(double r_i, double r_j, double delta_theta, double zeta) {
+    //usually, we set zeta = 1 in all experiments
+
+    assert(delta_theta > 0.0);
+    assert(r_i > 0.0);
+    assert(r_j > 0.0);
+    assert(zeta > 0.0);
+
+    double x_ij = (1. / zeta) * std::acosh(std::cosh(zeta*r_i) * std::cosh(zeta*r_j) - std::sinh(zeta*r_i)*std::sinh(zeta*r_j)*std::cos(delta_theta));
+    return x_ij;
+}
+
+void
+HyperbolicRoutingCalculator::addNextHop(ndn::Name dest, std::string faceUri,
                                              double cost, RoutingTable& rt)
 {
   NextHop hop(faceUri, cost);

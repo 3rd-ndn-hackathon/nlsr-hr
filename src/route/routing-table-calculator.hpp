@@ -223,6 +223,13 @@ private:
   void
   addNextHop(ndn::Name destinationRouter, std::string faceUri, double cost, RoutingTable& rt);
 
+  double
+  get_hyperbolic_distance(double r_i, double r_j, double delta_theta, double zeta); // TODO: need to rename this
+
+  double
+  get_angular_distance(std::vector<double> angle_vector_i,
+                                                    std::vector<double> angle_vector_j);
+
 private:
   const size_t m_nRouters;
   const bool m_isDryRun;
