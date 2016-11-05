@@ -1,0 +1,32 @@
+1478386194.382584 INFO: [CsPolicy] setLimit 10
+1478386194.382670 INFO: [StrategyChoice] setDefaultStrategy /localhost/nfd/strategy/best-route/%FD%04
+1478386194.383167 INFO: [InternalForwarderTransport] [id=0,local=internal://,remote=internal://] Creating transport
+1478386194.383249 INFO: [FaceTable] Added face id=1 remote=internal:// local=internal://
+1478386194.388909 WARNING: [CommandAuthenticator] 'certfile any' is intended for demo purposes only and SHOULD NOT be used in production environments
+1478386194.389355 INFO: [StrategyChoice] changeStrategy(/ndn/broadcast) from /localhost/nfd/strategy/best-route/%FD%04 to /localhost/nfd/strategy/multicast/%FD%01
+1478386194.389398 INFO: [StrategyChoice] changeStrategy(/localhost) from /localhost/nfd/strategy/best-route/%FD%04 to /localhost/nfd/strategy/multicast/%FD%01
+1478386194.389425 INFO: [StrategyChoice] changeStrategy(/localhost/nfd) from /localhost/nfd/strategy/multicast/%FD%01 to /localhost/nfd/strategy/best-route/%FD%04
+1478386194.389449 INFO: [CsPolicy] setLimit 65536
+1478386194.411489 INFO: [MulticastUdpTransport] [id=0,local=udp4://10.84.44.186:56363,remote=udp4://224.0.23.170:56363] Creating transport
+1478386194.411514 INFO: [FaceTable] Added face id=256 remote=udp4://224.0.23.170:56363 local=udp4://10.84.44.186:56363
+1478386194.411627 INFO: [EthernetTransport] [id=0,local=dev://wlp2s0,remote=ether://[01:00:5e:00:17:aa]] Creating transport
+1478386194.444258 INFO: [FaceTable] Added face id=257 remote=ether://[01:00:5e:00:17:aa] local=dev://wlp2s0
+1478386194.444400 INFO: [EthernetTransport] [id=0,local=dev://enp4s0,remote=ether://[01:00:5e:00:17:aa]] Creating transport
+1478386194.472482 INFO: [FaceTable] Added face id=258 remote=ether://[01:00:5e:00:17:aa] local=dev://enp4s0
+1478386194.472591 INFO: [CommandAuthenticator] clear-authorizations
+1478386194.472610 WARNING: [CommandAuthenticator] 'certfile any' is intended for demo purposes only and SHOULD NOT be used in production environments
+1478386194.472624 INFO: [CommandAuthenticator] authorize module=faces signer=any
+1478386194.472633 INFO: [CommandAuthenticator] authorize module=fib signer=any
+1478386194.472641 INFO: [CommandAuthenticator] authorize module=strategy-choice signer=any
+1478386194.473083 INFO: [InternalForwarderTransport] [id=0,local=null://,remote=null://] Creating transport
+1478386194.473119 INFO: [FaceTable] Added face id=255 remote=null:// local=null://
+1478386194.483054 INFO: [InternalForwarderTransport] [id=0,local=contentstore://,remote=contentstore://] Creating transport
+1478386194.483098 INFO: [FaceTable] Added face id=254 remote=contentstore:// local=contentstore://
+1478386194.491011 INFO: [PrivilegeHelper] dropped to effective uid=0 gid=0
+1478386194.494828 INFO: [AutoPrefixPropagator] Load auto_prefix_propagate section in rib section
+1478386194.495424 INFO: [AutoPrefixPropagator] Load auto_prefix_propagate section in rib section
+1478386194.504584 INFO: [RibManager] Start monitoring face create/destroy events
+1478386194.512331 INFO: [UnixStreamTransport] [id=0,local=unix:///run/nfd.sock,remote=fd://26] Creating transport
+1478386194.512369 INFO: [FaceTable] Added face id=259 remote=fd://26 local=unix:///run/nfd.sock
+1478386194.530302 INFO: [AutoPrefixPropagator] local registration only for /localhost/nfd
+1478386196.020492 INFO: [NFD] Caught signal 'Interrupt', exiting...

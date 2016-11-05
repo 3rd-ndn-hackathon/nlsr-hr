@@ -3101,3 +3101,592 @@
 20161105164420274 DEBUG: [HelloProtocol] Neighbor: /ndn/edu/memphis/%C1.Router/cs/castor
 20161105164420274 DEBUG: [HelloProtocol] Status: 0
 20161105164420275 DEBUG: [HelloProtocol] Info Interest Timed out: 3
+20161105164604799 DEBUG: [nlsr] Initializing Nlsr
+20161105164604799 DEBUG: [SequencingManager] Seq File Name: /home/ashlesh/Projects/workshops/3rd-ndn-hackathon/nlsr-hr/log/nlsrSeqNo.txt
+20161105164604799 DEBUG: [SyncLogicHandler] Creating Sync socket. Sync Prefix: /ndn/NLSR/sync
+20161105164604802 DEBUG: [ConfParameter] Router Name: /%C1.Router/cs/pollux
+20161105164604802 DEBUG: [ConfParameter] Site Name: /edu/memphis
+20161105164604802 DEBUG: [ConfParameter] Network: /ndn
+20161105164604802 DEBUG: [ConfParameter] Router Prefix: /ndn/edu/memphis/%C1.Router/cs/pollux
+20161105164604802 DEBUG: [ConfParameter] ChronoSync sync Prefix: /ndn/NLSR/sync
+20161105164604803 DEBUG: [ConfParameter] ChronoSync LSA prefix: /ndn/NLSR/LSA
+20161105164604803 DEBUG: [ConfParameter] Hello Interest retry number: 3
+20161105164604803 DEBUG: [ConfParameter] Hello Interest resend second: 1
+20161105164604803 DEBUG: [ConfParameter] Info Interest interval: 60
+20161105164604803 DEBUG: [ConfParameter] LSA refresh time: 1800
+20161105164604803 DEBUG: [ConfParameter] LSA Interest lifetime: 4 seconds
+20161105164604803 DEBUG: [ConfParameter] Router dead interval: 3600
+20161105164604803 DEBUG: [ConfParameter] Max Faces Per Prefix: 3
+20161105164604803 DEBUG: [ConfParameter] Hyperbolic Routing: 1
+20161105164604803 DEBUG: [ConfParameter] Hyp R: 123.456
+20161105164604803 DEBUG: [ConfParameter] Hyp theta 0: 1.45 
+20161105164604803 DEBUG: [ConfParameter] Hyp theta 1: 2.36 
+20161105164604803 DEBUG: [ConfParameter] Hyp theta 2: 3.21 
+20161105164604803 DEBUG: [ConfParameter] Log Directory: /home/ashlesh/Projects/workshops/3rd-ndn-hackathon/nlsr-hr/log
+20161105164604803 DEBUG: [ConfParameter] Seq Directory: /home/ashlesh/Projects/workshops/3rd-ndn-hackathon/nlsr-hr/log
+20161105164604803 DEBUG: [ConfParameter] Adjacency LSA build interval:  5
+20161105164604803 DEBUG: [ConfParameter] First Hello Interest interval: 10
+20161105164604803 DEBUG: [ConfParameter] Routing calculation interval:  15
+20161105164604803 DEBUG: [AdjacencyList] -------Adjacency List--------
+20161105164604803 DEBUG: [Adjacent] Adjacent : /ndn/edu/memphis/%C1.Router/cs/castor
+20161105164604803 DEBUG: [Adjacent] Connecting FaceUri: udp://castor.cs.memphis.edu
+20161105164604803 DEBUG: [Adjacent] Link Cost: 25
+20161105164604803 DEBUG: [Adjacent] Status: 0
+20161105164604803 DEBUG: [Adjacent] Interest Timed out: 0
+20161105164604803 DEBUG: [Adjacent] Adjacent : /ndn/edu/memphis/%C1.Router/cs/mira
+20161105164604803 DEBUG: [Adjacent] Connecting FaceUri: udp://mira.cs.memphis.edu
+20161105164604803 DEBUG: [Adjacent] Link Cost: 30
+20161105164604803 DEBUG: [Adjacent] Status: 0
+20161105164604803 DEBUG: [Adjacent] Interest Timed out: 0
+20161105164604803 DEBUG: [NamePrefixList] -------Name Prefix List--------
+20161105164604803 DEBUG: [NamePrefixList] Name 1 : /ndn/edu/memphis/cs/netlab
+20161105164604803 DEBUG: [NamePrefixList] Name 2 : /ndn/edu/memphis/sports/basketball
+20161105164606168 DEBUG: [nlsr] Default NLSR identity: /ndn/edu/memphis/%C1.Router/cs/pollux/NLSR
+20161105164606168 DEBUG: [nlsr] Setting interest filter for name: /ndn/edu/memphis/%C1.Router/cs/pollux
+20161105164606175 DEBUG: [nlsr] Setting interest filter for name: /ndn/NLSR/LSA/edu/memphis/%C1.Router/cs/pollux
+20161105164606182 DEBUG: [Lsdb] New Name LSA
+20161105164606182 DEBUG: [Lsdb] Adding Name Lsa
+20161105164606182 DEBUG: [Lsa] Name Lsa: 
+20161105164606182 DEBUG: [Lsa]   Origination Router: /ndn/edu/memphis/%C1.Router/cs/pollux
+20161105164606182 DEBUG: [Lsa]   Ls Type: name
+20161105164606182 DEBUG: [Lsa]   Ls Seq No: 287
+20161105164606182 DEBUG: [Lsa]   Ls Lifetime: 1478389566182418092 nanoseconds since Jan 1, 1970
+20161105164606182 DEBUG: [Lsa]   Names: 
+20161105164606182 DEBUG: [Lsa]     Name 1: /ndn/edu/memphis/cs/netlab
+20161105164606182 DEBUG: [Lsa]     Name 1: /ndn/edu/memphis/sports/basketball
+20161105164606182 DEBUG: [Lsa] name_lsa_end
+20161105164606182 DEBUG: [SyncLogicHandler] Publishing Sync Update. Prefix: /ndn/NLSR/LSA/edu/memphis/%C1.Router/cs/pollux Seq No: 315560138113024
+20161105164606183 DEBUG: [Lsdb] New Coordinate LSA. Adding to LSDB
+20161105164606183 DEBUG: [Lsdb] Adding Coordinate Lsa
+20161105164606183 DEBUG: [Lsa] Cor Lsa: 
+20161105164606183 DEBUG: [Lsa]   Origination Router: /ndn/edu/memphis/%C1.Router/cs/pollux
+20161105164606183 DEBUG: [Lsa]   Ls Type: coordinate
+20161105164606183 DEBUG: [Lsa]   Ls Seq No: 287
+20161105164606183 DEBUG: [Lsa]   Ls Lifetime: 1478389566182746005 nanoseconds since Jan 1, 1970
+20161105164606183 DEBUG: [Lsa]     Hyperbolic Radius: 123.456
+20161105164606183 DEBUG: [Lsa]   Hyp theta 0: 1.45
+20161105164606183 DEBUG: [Lsa]   Hyp theta 1: 2.36
+20161105164606183 DEBUG: [Lsa]   Hyp theta 2: 3.21
+20161105164606183 DEBUG: [RoutingTable] Scheduling routing table calculation in 15 seconds
+20161105164606195 DEBUG: [HelloProtocol] Scheduling HELLO Interests in 10 seconds
+20161105164606201 DEBUG: [SyncLogic] addLocalNames (): old state 00
+20161105164606201 DEBUG: [SyncLogic] addLocalNames (): new state e52d71d42666664215b6ed48308647f9554ae57fffca12cf5fcffc916a098986
+20161105164606201 DEBUG: [SyncLogic] Satisfied 0 pending interests
+20161105164606201 DEBUG: [SyncLogic] sendSyncInterest
+20161105164606201 DEBUG: [SyncLogic] >> I /ndn/NLSR/sync/e52d71d42666664215b6ed48308647f9554ae57fffca12cf5fcffc916a098986
+20161105164606201 DEBUG: [SyncLogic] sendSyncInterest: /ndn/NLSR/sync/e52d71d42666664215b6ed48308647f9554ae57fffca12cf5fcffc916a098986
+20161105164606202 FATAL: [NlsrRunner] ERROR: error while connecting to the forwarder (No such file or directory)
+20161105164606202 DEBUG: [Fib] Fib::clean called
+20161105164610701 DEBUG: [nlsr] Initializing Nlsr
+20161105164610701 DEBUG: [SequencingManager] Seq File Name: /home/ashlesh/Projects/workshops/3rd-ndn-hackathon/nlsr-hr/log/nlsrSeqNo.txt
+20161105164610701 DEBUG: [SyncLogicHandler] Creating Sync socket. Sync Prefix: /ndn/NLSR/sync
+20161105164610711 DEBUG: [ConfParameter] Router Name: /%C1.Router/cs/pollux
+20161105164610711 DEBUG: [ConfParameter] Site Name: /edu/memphis
+20161105164610711 DEBUG: [ConfParameter] Network: /ndn
+20161105164610711 DEBUG: [ConfParameter] Router Prefix: /ndn/edu/memphis/%C1.Router/cs/pollux
+20161105164610711 DEBUG: [ConfParameter] ChronoSync sync Prefix: /ndn/NLSR/sync
+20161105164610711 DEBUG: [ConfParameter] ChronoSync LSA prefix: /ndn/NLSR/LSA
+20161105164610711 DEBUG: [ConfParameter] Hello Interest retry number: 3
+20161105164610711 DEBUG: [ConfParameter] Hello Interest resend second: 1
+20161105164610711 DEBUG: [ConfParameter] Info Interest interval: 60
+20161105164610711 DEBUG: [ConfParameter] LSA refresh time: 1800
+20161105164610711 DEBUG: [ConfParameter] LSA Interest lifetime: 4 seconds
+20161105164610711 DEBUG: [ConfParameter] Router dead interval: 3600
+20161105164610711 DEBUG: [ConfParameter] Max Faces Per Prefix: 3
+20161105164610711 DEBUG: [ConfParameter] Hyperbolic Routing: 1
+20161105164610711 DEBUG: [ConfParameter] Hyp R: 123.456
+20161105164610711 DEBUG: [ConfParameter] Hyp theta 0: 1.45 
+20161105164610711 DEBUG: [ConfParameter] Hyp theta 1: 2.36 
+20161105164610711 DEBUG: [ConfParameter] Hyp theta 2: 3.21 
+20161105164610711 DEBUG: [ConfParameter] Log Directory: /home/ashlesh/Projects/workshops/3rd-ndn-hackathon/nlsr-hr/log
+20161105164610711 DEBUG: [ConfParameter] Seq Directory: /home/ashlesh/Projects/workshops/3rd-ndn-hackathon/nlsr-hr/log
+20161105164610711 DEBUG: [ConfParameter] Adjacency LSA build interval:  5
+20161105164610711 DEBUG: [ConfParameter] First Hello Interest interval: 10
+20161105164610711 DEBUG: [ConfParameter] Routing calculation interval:  15
+20161105164610711 DEBUG: [AdjacencyList] -------Adjacency List--------
+20161105164610711 DEBUG: [Adjacent] Adjacent : /ndn/edu/memphis/%C1.Router/cs/castor
+20161105164610711 DEBUG: [Adjacent] Connecting FaceUri: udp://castor.cs.memphis.edu
+20161105164610711 DEBUG: [Adjacent] Link Cost: 25
+20161105164610711 DEBUG: [Adjacent] Status: 0
+20161105164610711 DEBUG: [Adjacent] Interest Timed out: 0
+20161105164610711 DEBUG: [Adjacent] Adjacent : /ndn/edu/memphis/%C1.Router/cs/mira
+20161105164610711 DEBUG: [Adjacent] Connecting FaceUri: udp://mira.cs.memphis.edu
+20161105164610711 DEBUG: [Adjacent] Link Cost: 30
+20161105164610711 DEBUG: [Adjacent] Status: 0
+20161105164610711 DEBUG: [Adjacent] Interest Timed out: 0
+20161105164610712 DEBUG: [NamePrefixList] -------Name Prefix List--------
+20161105164610712 DEBUG: [NamePrefixList] Name 1 : /ndn/edu/memphis/cs/netlab
+20161105164610712 DEBUG: [NamePrefixList] Name 2 : /ndn/edu/memphis/sports/basketball
+20161105164611837 DEBUG: [nlsr] Default NLSR identity: /ndn/edu/memphis/%C1.Router/cs/pollux/NLSR
+20161105164611837 DEBUG: [nlsr] Setting interest filter for name: /ndn/edu/memphis/%C1.Router/cs/pollux
+20161105164611844 DEBUG: [nlsr] Setting interest filter for name: /ndn/NLSR/LSA/edu/memphis/%C1.Router/cs/pollux
+20161105164611851 DEBUG: [Lsdb] New Name LSA
+20161105164611851 DEBUG: [Lsdb] Adding Name Lsa
+20161105164611851 DEBUG: [Lsa] Name Lsa: 
+20161105164611851 DEBUG: [Lsa]   Origination Router: /ndn/edu/memphis/%C1.Router/cs/pollux
+20161105164611851 DEBUG: [Lsa]   Ls Type: name
+20161105164611851 DEBUG: [Lsa]   Ls Seq No: 298
+20161105164611851 DEBUG: [Lsa]   Ls Lifetime: 1478389571851247708 nanoseconds since Jan 1, 1970
+20161105164611851 DEBUG: [Lsa]   Names: 
+20161105164611851 DEBUG: [Lsa]     Name 1: /ndn/edu/memphis/cs/netlab
+20161105164611851 DEBUG: [Lsa]     Name 1: /ndn/edu/memphis/sports/basketball
+20161105164611851 DEBUG: [Lsa] name_lsa_end
+20161105164611851 DEBUG: [SyncLogicHandler] Publishing Sync Update. Prefix: /ndn/NLSR/LSA/edu/memphis/%C1.Router/cs/pollux Seq No: 327654777552896
+20161105164611851 DEBUG: [Lsdb] New Coordinate LSA. Adding to LSDB
+20161105164611851 DEBUG: [Lsdb] Adding Coordinate Lsa
+20161105164611851 DEBUG: [Lsa] Cor Lsa: 
+20161105164611851 DEBUG: [Lsa]   Origination Router: /ndn/edu/memphis/%C1.Router/cs/pollux
+20161105164611851 DEBUG: [Lsa]   Ls Type: coordinate
+20161105164611851 DEBUG: [Lsa]   Ls Seq No: 298
+20161105164611852 DEBUG: [Lsa]   Ls Lifetime: 1478389571851589478 nanoseconds since Jan 1, 1970
+20161105164611852 DEBUG: [Lsa]     Hyperbolic Radius: 123.456
+20161105164611852 DEBUG: [Lsa]   Hyp theta 0: 1.45
+20161105164611852 DEBUG: [Lsa]   Hyp theta 1: 2.36
+20161105164611852 DEBUG: [Lsa]   Hyp theta 2: 3.21
+20161105164611852 DEBUG: [RoutingTable] Scheduling routing table calculation in 15 seconds
+20161105164611863 DEBUG: [HelloProtocol] Scheduling HELLO Interests in 10 seconds
+20161105164611869 DEBUG: [SyncLogic] addLocalNames (): old state 00
+20161105164611869 DEBUG: [SyncLogic] addLocalNames (): new state 3bca8fd6c73c2b87c96de05cbe9404aea7744654fa3216e3fc8f94d9b2fed882
+20161105164611869 DEBUG: [SyncLogic] Satisfied 0 pending interests
+20161105164611869 DEBUG: [SyncLogic] sendSyncInterest
+20161105164611869 DEBUG: [SyncLogic] >> I /ndn/NLSR/sync/3bca8fd6c73c2b87c96de05cbe9404aea7744654fa3216e3fc8f94d9b2fed882
+20161105164611870 DEBUG: [SyncLogic] sendSyncInterest: /ndn/NLSR/sync/3bca8fd6c73c2b87c96de05cbe9404aea7744654fa3216e3fc8f94d9b2fed882
+20161105164611897 DEBUG: [Fib] Successfully set strategy choice: /localhost/nfd/strategy/multicast/%FD%01 for name: /ndn/NLSR/LSA
+20161105164611904 DEBUG: [Fib] Successfully set strategy choice: /localhost/nfd/strategy/multicast/%FD%01 for name: /ndn/broadcast/KEYS
+20161105164611904 DEBUG: [Fib] Successfully set strategy choice: /localhost/nfd/strategy/multicast/%FD%01 for name: /ndn/NLSR/sync
+20161105164611904 DEBUG: [SyncLogic] Sync prefix registration succeeded! /ndn/NLSR/sync
+20161105164611904 DEBUG: [nlsr] Successfully registered prefix: /ndn/edu/memphis/%C1.Router/cs/pollux
+20161105164611904 DEBUG: [LsdbDatasetInterestHandler] Setting interest filter for: /ndn/edu/memphis/%C1.Router/cs/pollux/lsdb
+20161105164611904 DEBUG: [nlsr] Successfully registered prefix: /ndn/NLSR/LSA/edu/memphis/%C1.Router/cs/pollux
+20161105164611912 DEBUG: [nlsr] Successfully registered prefix: /localhost/nlsr
+20161105164611912 DEBUG: [PrefixUpdateProcessor] Setting Interest filter for: /localhost/nlsr/prefix-update
+20161105164611912 DEBUG: [LsdbDatasetInterestHandler] Setting interest filter for: /localhost/nlsr/lsdb
+20161105164616155 DEBUG: [SyncLogic] sendSyncInterest
+20161105164616155 DEBUG: [SyncLogic] >> I /ndn/NLSR/sync/3bca8fd6c73c2b87c96de05cbe9404aea7744654fa3216e3fc8f94d9b2fed882
+20161105164616155 DEBUG: [SyncLogic] sendSyncInterest: /ndn/NLSR/sync/3bca8fd6c73c2b87c96de05cbe9404aea7744654fa3216e3fc8f94d9b2fed882
+20161105164620257 DEBUG: [SyncLogic] sendSyncInterest
+20161105164620257 DEBUG: [SyncLogic] >> I /ndn/NLSR/sync/3bca8fd6c73c2b87c96de05cbe9404aea7744654fa3216e3fc8f94d9b2fed882
+20161105164620257 DEBUG: [SyncLogic] sendSyncInterest: /ndn/NLSR/sync/3bca8fd6c73c2b87c96de05cbe9404aea7744654fa3216e3fc8f94d9b2fed882
+20161105164621864 DEBUG: [HelloProtocol] Scheduling HELLO Interests in 60 seconds
+20161105164621869 DEBUG: [FaceController] Converted udp://castor.cs.memphis.edu to canonical form: udp4://141.225.11.131:6363
+20161105164621869 DEBUG: [FaceController] Creating Face in NFD with face-uri: udp4://141.225.11.131:6363
+20161105164621878 DEBUG: [FaceController] Converted udp://mira.cs.memphis.edu to canonical form: udp4://141.225.8.92:6363
+20161105164621878 DEBUG: [FaceController] Creating Face in NFD with face-uri: udp4://141.225.8.92:6363
+20161105164621912 DEBUG: [Fib] Registering prefix: /ndn/NLSR/sync Face Uri: udp://castor.cs.memphis.edu Face Id: 273
+20161105164621917 DEBUG: [Fib] Registering prefix: /ndn/NLSR/LSA Face Uri: udp://castor.cs.memphis.edu Face Id: 273
+20161105164621922 DEBUG: [Fib] Registering prefix: /ndn/broadcast/KEYS Face Uri: udp://castor.cs.memphis.edu Face Id: 273
+20161105164621927 DEBUG: [HelloProtocol] Expressing Interest :/ndn/edu/memphis/%C1.Router/cs/castor/NLSR/INFO/%07%29%08%03ndn%08%03edu%08%07memphis%08%08%C1.Router%08%02cs%08%06pollux
+20161105164621932 DEBUG: [Fib] Registering prefix: /ndn/NLSR/sync Face Uri: udp://mira.cs.memphis.edu Face Id: 274
+20161105164621937 DEBUG: [Fib] Registering prefix: /ndn/NLSR/LSA Face Uri: udp://mira.cs.memphis.edu Face Id: 274
+20161105164621943 DEBUG: [Fib] Registering prefix: /ndn/broadcast/KEYS Face Uri: udp://mira.cs.memphis.edu Face Id: 274
+20161105164621947 DEBUG: [HelloProtocol] Expressing Interest :/ndn/edu/memphis/%C1.Router/cs/mira/NLSR/INFO/%07%29%08%03ndn%08%03edu%08%07memphis%08%08%C1.Router%08%02cs%08%06pollux
+20161105164621947 DEBUG: [Fib] Register successful Prefix: /ndn/NLSR/sync Face Uri: udp://castor.cs.memphis.edu
+20161105164621947 DEBUG: [FaceMap] ------- Face Map-----------
+20161105164621947 DEBUG: [FaceMap] Face Map Entry (FaceUri: udp://castor.cs.memphis.edu Face Id: 273)
+20161105164621948 DEBUG: [HelloProtocol] Interest timed out for Name: /ndn/edu/memphis/%C1.Router/cs/mira/NLSR/INFO/%07%29%08%03ndn%08%03edu%08%07memphis%08%08%C1.Router%08%02cs%08%06pollux
+20161105164621948 DEBUG: [HelloProtocol] Neighbor: /ndn/edu/memphis/%C1.Router/cs/mira
+20161105164621948 DEBUG: [HelloProtocol] Status: 0
+20161105164621948 DEBUG: [HelloProtocol] Info Interest Timed out: 1
+20161105164621948 DEBUG: [HelloProtocol] Expressing Interest :/ndn/edu/memphis/%C1.Router/cs/mira/NLSR/INFO/%07%29%08%03ndn%08%03edu%08%07memphis%08%08%C1.Router%08%02cs%08%06pollux
+20161105164621948 DEBUG: [HelloProtocol] Interest timed out for Name: /ndn/edu/memphis/%C1.Router/cs/mira/NLSR/INFO/%07%29%08%03ndn%08%03edu%08%07memphis%08%08%C1.Router%08%02cs%08%06pollux
+20161105164621948 DEBUG: [HelloProtocol] Neighbor: /ndn/edu/memphis/%C1.Router/cs/mira
+20161105164621948 DEBUG: [HelloProtocol] Status: 0
+20161105164621948 DEBUG: [HelloProtocol] Info Interest Timed out: 2
+20161105164621948 DEBUG: [HelloProtocol] Expressing Interest :/ndn/edu/memphis/%C1.Router/cs/mira/NLSR/INFO/%07%29%08%03ndn%08%03edu%08%07memphis%08%08%C1.Router%08%02cs%08%06pollux
+20161105164621949 DEBUG: [HelloProtocol] Interest timed out for Name: /ndn/edu/memphis/%C1.Router/cs/mira/NLSR/INFO/%07%29%08%03ndn%08%03edu%08%07memphis%08%08%C1.Router%08%02cs%08%06pollux
+20161105164621949 DEBUG: [HelloProtocol] Neighbor: /ndn/edu/memphis/%C1.Router/cs/mira
+20161105164621949 DEBUG: [HelloProtocol] Status: 0
+20161105164621949 DEBUG: [HelloProtocol] Info Interest Timed out: 3
+20161105164621962 DEBUG: [Fib] Register successful Prefix: /ndn/NLSR/LSA Face Uri: udp://castor.cs.memphis.edu
+20161105164621962 DEBUG: [FaceMap] ------- Face Map-----------
+20161105164621962 DEBUG: [FaceMap] Face Map Entry (FaceUri: udp://castor.cs.memphis.edu Face Id: 273)
+20161105164621967 DEBUG: [Fib] Register successful Prefix: /ndn/broadcast/KEYS Face Uri: udp://castor.cs.memphis.edu
+20161105164621967 DEBUG: [FaceMap] ------- Face Map-----------
+20161105164621967 DEBUG: [FaceMap] Face Map Entry (FaceUri: udp://castor.cs.memphis.edu Face Id: 273)
+20161105164621967 DEBUG: [Fib] Register successful Prefix: /ndn/NLSR/sync Face Uri: udp://mira.cs.memphis.edu
+20161105164621967 DEBUG: [FaceMap] ------- Face Map-----------
+20161105164621967 DEBUG: [FaceMap] Face Map Entry (FaceUri: udp://castor.cs.memphis.edu Face Id: 273)
+20161105164621967 DEBUG: [FaceMap] Face Map Entry (FaceUri: udp://mira.cs.memphis.edu Face Id: 274)
+20161105164621967 DEBUG: [Fib] Register successful Prefix: /ndn/NLSR/LSA Face Uri: udp://mira.cs.memphis.edu
+20161105164621967 DEBUG: [FaceMap] ------- Face Map-----------
+20161105164621967 DEBUG: [FaceMap] Face Map Entry (FaceUri: udp://castor.cs.memphis.edu Face Id: 273)
+20161105164621967 DEBUG: [FaceMap] Face Map Entry (FaceUri: udp://mira.cs.memphis.edu Face Id: 274)
+20161105164621971 DEBUG: [Fib] Register successful Prefix: /ndn/broadcast/KEYS Face Uri: udp://mira.cs.memphis.edu
+20161105164621971 DEBUG: [FaceMap] ------- Face Map-----------
+20161105164621971 DEBUG: [FaceMap] Face Map Entry (FaceUri: udp://castor.cs.memphis.edu Face Id: 273)
+20161105164621971 DEBUG: [FaceMap] Face Map Entry (FaceUri: udp://mira.cs.memphis.edu Face Id: 274)
+20161105164622927 DEBUG: [HelloProtocol] Interest timed out for Name: /ndn/edu/memphis/%C1.Router/cs/castor/NLSR/INFO/%07%29%08%03ndn%08%03edu%08%07memphis%08%08%C1.Router%08%02cs%08%06pollux
+20161105164622927 DEBUG: [HelloProtocol] Neighbor: /ndn/edu/memphis/%C1.Router/cs/castor
+20161105164622927 DEBUG: [HelloProtocol] Status: 0
+20161105164622927 DEBUG: [HelloProtocol] Info Interest Timed out: 1
+20161105164622927 DEBUG: [HelloProtocol] Expressing Interest :/ndn/edu/memphis/%C1.Router/cs/castor/NLSR/INFO/%07%29%08%03ndn%08%03edu%08%07memphis%08%08%C1.Router%08%02cs%08%06pollux
+20161105164623928 DEBUG: [HelloProtocol] Interest timed out for Name: /ndn/edu/memphis/%C1.Router/cs/castor/NLSR/INFO/%07%29%08%03ndn%08%03edu%08%07memphis%08%08%C1.Router%08%02cs%08%06pollux
+20161105164623928 DEBUG: [HelloProtocol] Neighbor: /ndn/edu/memphis/%C1.Router/cs/castor
+20161105164623929 DEBUG: [HelloProtocol] Status: 0
+20161105164623929 DEBUG: [HelloProtocol] Info Interest Timed out: 2
+20161105164623929 DEBUG: [HelloProtocol] Expressing Interest :/ndn/edu/memphis/%C1.Router/cs/castor/NLSR/INFO/%07%29%08%03ndn%08%03edu%08%07memphis%08%08%C1.Router%08%02cs%08%06pollux
+20161105164624542 DEBUG: [SyncLogic] sendSyncInterest
+20161105164624542 DEBUG: [SyncLogic] >> I /ndn/NLSR/sync/3bca8fd6c73c2b87c96de05cbe9404aea7744654fa3216e3fc8f94d9b2fed882
+20161105164624542 DEBUG: [SyncLogic] sendSyncInterest: /ndn/NLSR/sync/3bca8fd6c73c2b87c96de05cbe9404aea7744654fa3216e3fc8f94d9b2fed882
+20161105164624593 DEBUG: [nlsr] Face to /ndn/edu/memphis/%C1.Router/cs/mira with face id: 274 destroyed
+20161105164624929 DEBUG: [HelloProtocol] Interest timed out for Name: /ndn/edu/memphis/%C1.Router/cs/castor/NLSR/INFO/%07%29%08%03ndn%08%03edu%08%07memphis%08%08%C1.Router%08%02cs%08%06pollux
+20161105164624929 DEBUG: [HelloProtocol] Neighbor: /ndn/edu/memphis/%C1.Router/cs/castor
+20161105164624929 DEBUG: [HelloProtocol] Status: 0
+20161105164624929 DEBUG: [HelloProtocol] Info Interest Timed out: 3
+20161105164716193 DEBUG: [nlsr] Initializing Nlsr
+20161105164716193 DEBUG: [SequencingManager] Seq File Name: /home/ashlesh/Projects/workshops/3rd-ndn-hackathon/nlsr-hr/log/nlsrSeqNo.txt
+20161105164716193 DEBUG: [SyncLogicHandler] Creating Sync socket. Sync Prefix: /ndn/NLSR/sync
+20161105164716203 DEBUG: [ConfParameter] Router Name: /%C1.Router/cs/pollux
+20161105164716203 DEBUG: [ConfParameter] Site Name: /edu/memphis
+20161105164716203 DEBUG: [ConfParameter] Network: /ndn
+20161105164716203 DEBUG: [ConfParameter] Router Prefix: /ndn/edu/memphis/%C1.Router/cs/pollux
+20161105164716203 DEBUG: [ConfParameter] ChronoSync sync Prefix: /ndn/NLSR/sync
+20161105164716203 DEBUG: [ConfParameter] ChronoSync LSA prefix: /ndn/NLSR/LSA
+20161105164716203 DEBUG: [ConfParameter] Hello Interest retry number: 3
+20161105164716203 DEBUG: [ConfParameter] Hello Interest resend second: 1
+20161105164716203 DEBUG: [ConfParameter] Info Interest interval: 60
+20161105164716203 DEBUG: [ConfParameter] LSA refresh time: 1800
+20161105164716203 DEBUG: [ConfParameter] LSA Interest lifetime: 4 seconds
+20161105164716203 DEBUG: [ConfParameter] Router dead interval: 3600
+20161105164716203 DEBUG: [ConfParameter] Max Faces Per Prefix: 3
+20161105164716203 DEBUG: [ConfParameter] Hyperbolic Routing: 1
+20161105164716203 DEBUG: [ConfParameter] Hyp R: 123.456
+20161105164716203 DEBUG: [ConfParameter]  Hyp theta 0: 1.45 
+
+20161105164716203 DEBUG: [ConfParameter]  Hyp theta 1: 2.36 
+
+20161105164716203 DEBUG: [ConfParameter]  Hyp theta 2: 3.21 
+
+20161105164716203 DEBUG: [ConfParameter] Log Directory: /home/ashlesh/Projects/workshops/3rd-ndn-hackathon/nlsr-hr/log
+20161105164716203 DEBUG: [ConfParameter] Seq Directory: /home/ashlesh/Projects/workshops/3rd-ndn-hackathon/nlsr-hr/log
+20161105164716203 DEBUG: [ConfParameter] Adjacency LSA build interval:  5
+20161105164716203 DEBUG: [ConfParameter] First Hello Interest interval: 10
+20161105164716203 DEBUG: [ConfParameter] Routing calculation interval:  15
+20161105164716203 DEBUG: [AdjacencyList] -------Adjacency List--------
+20161105164716203 DEBUG: [Adjacent] Adjacent : /ndn/edu/memphis/%C1.Router/cs/castor
+20161105164716203 DEBUG: [Adjacent] Connecting FaceUri: udp://castor.cs.memphis.edu
+20161105164716204 DEBUG: [Adjacent] Link Cost: 25
+20161105164716204 DEBUG: [Adjacent] Status: 0
+20161105164716204 DEBUG: [Adjacent] Interest Timed out: 0
+20161105164716204 DEBUG: [Adjacent] Adjacent : /ndn/edu/memphis/%C1.Router/cs/mira
+20161105164716204 DEBUG: [Adjacent] Connecting FaceUri: udp://mira.cs.memphis.edu
+20161105164716204 DEBUG: [Adjacent] Link Cost: 30
+20161105164716204 DEBUG: [Adjacent] Status: 0
+20161105164716204 DEBUG: [Adjacent] Interest Timed out: 0
+20161105164716204 DEBUG: [NamePrefixList] -------Name Prefix List--------
+20161105164716204 DEBUG: [NamePrefixList] Name 1 : /ndn/edu/memphis/cs/netlab
+20161105164716204 DEBUG: [NamePrefixList] Name 2 : /ndn/edu/memphis/sports/basketball
+20161105164717381 DEBUG: [nlsr] Default NLSR identity: /ndn/edu/memphis/%C1.Router/cs/pollux/NLSR
+20161105164717381 DEBUG: [nlsr] Setting interest filter for name: /ndn/edu/memphis/%C1.Router/cs/pollux
+20161105164717388 DEBUG: [nlsr] Setting interest filter for name: /ndn/NLSR/LSA/edu/memphis/%C1.Router/cs/pollux
+20161105164717395 DEBUG: [Lsdb] New Name LSA
+20161105164717395 DEBUG: [Lsdb] Adding Name Lsa
+20161105164717395 DEBUG: [Lsa] Name Lsa: 
+20161105164717395 DEBUG: [Lsa]   Origination Router: /ndn/edu/memphis/%C1.Router/cs/pollux
+20161105164717395 DEBUG: [Lsa]   Ls Type: name
+20161105164717395 DEBUG: [Lsa]   Ls Seq No: 309
+20161105164717395 DEBUG: [Lsa]   Ls Lifetime: 1478389637395086485 nanoseconds since Jan 1, 1970
+20161105164717395 DEBUG: [Lsa]   Names: 
+20161105164717395 DEBUG: [Lsa]     Name 1: /ndn/edu/memphis/cs/netlab
+20161105164717395 DEBUG: [Lsa]     Name 1: /ndn/edu/memphis/sports/basketball
+20161105164717395 DEBUG: [Lsa] name_lsa_end
+20161105164717395 DEBUG: [SyncLogicHandler] Publishing Sync Update. Prefix: /ndn/NLSR/LSA/edu/memphis/%C1.Router/cs/pollux Seq No: 339749416992768
+20161105164717395 DEBUG: [Lsdb] New Coordinate LSA. Adding to LSDB
+20161105164717395 DEBUG: [Lsdb] Adding Coordinate Lsa
+20161105164717395 DEBUG: [Lsa] Cor Lsa: 
+20161105164717395 DEBUG: [Lsa]   Origination Router: /ndn/edu/memphis/%C1.Router/cs/pollux
+20161105164717395 DEBUG: [Lsa]   Ls Type: coordinate
+20161105164717395 DEBUG: [Lsa]   Ls Seq No: 309
+20161105164717395 DEBUG: [Lsa]   Ls Lifetime: 1478389637395410319 nanoseconds since Jan 1, 1970
+20161105164717395 DEBUG: [Lsa]     Hyperbolic Radius: 123.456
+20161105164717395 DEBUG: [Lsa]   Hyp theta 0: 1.45
+20161105164717395 DEBUG: [Lsa]   Hyp theta 1: 2.36
+20161105164717395 DEBUG: [Lsa]   Hyp theta 2: 3.21
+20161105164717395 DEBUG: [RoutingTable] Scheduling routing table calculation in 15 seconds
+20161105164717407 DEBUG: [HelloProtocol] Scheduling HELLO Interests in 10 seconds
+20161105164717413 DEBUG: [SyncLogic] addLocalNames (): old state 00
+20161105164717413 DEBUG: [SyncLogic] addLocalNames (): new state 687d7c459ab0d65210fc438d30a062286a2fe86c7435943f7ed24e4c61de4771
+20161105164717413 DEBUG: [SyncLogic] Satisfied 0 pending interests
+20161105164717413 DEBUG: [SyncLogic] sendSyncInterest
+20161105164717413 DEBUG: [SyncLogic] >> I /ndn/NLSR/sync/687d7c459ab0d65210fc438d30a062286a2fe86c7435943f7ed24e4c61de4771
+20161105164717413 DEBUG: [SyncLogic] sendSyncInterest: /ndn/NLSR/sync/687d7c459ab0d65210fc438d30a062286a2fe86c7435943f7ed24e4c61de4771
+20161105164717413 FATAL: [NlsrRunner] ERROR: error while connecting to the forwarder (No such file or directory)
+20161105164717413 DEBUG: [Fib] Fib::clean called
+20161105164727451 DEBUG: [nlsr] Initializing Nlsr
+20161105164727451 DEBUG: [SequencingManager] Seq File Name: /home/ashlesh/Projects/workshops/3rd-ndn-hackathon/nlsr-hr/log/nlsrSeqNo.txt
+20161105164727451 DEBUG: [SyncLogicHandler] Creating Sync socket. Sync Prefix: /ndn/NLSR/sync
+20161105164727461 DEBUG: [ConfParameter] Router Name: /%C1.Router/cs/pollux
+20161105164727461 DEBUG: [ConfParameter] Site Name: /edu/memphis
+20161105164727461 DEBUG: [ConfParameter] Network: /ndn
+20161105164727461 DEBUG: [ConfParameter] Router Prefix: /ndn/edu/memphis/%C1.Router/cs/pollux
+20161105164727461 DEBUG: [ConfParameter] ChronoSync sync Prefix: /ndn/NLSR/sync
+20161105164727461 DEBUG: [ConfParameter] ChronoSync LSA prefix: /ndn/NLSR/LSA
+20161105164727461 DEBUG: [ConfParameter] Hello Interest retry number: 3
+20161105164727461 DEBUG: [ConfParameter] Hello Interest resend second: 1
+20161105164727461 DEBUG: [ConfParameter] Info Interest interval: 60
+20161105164727461 DEBUG: [ConfParameter] LSA refresh time: 1800
+20161105164727461 DEBUG: [ConfParameter] LSA Interest lifetime: 4 seconds
+20161105164727461 DEBUG: [ConfParameter] Router dead interval: 3600
+20161105164727461 DEBUG: [ConfParameter] Max Faces Per Prefix: 3
+20161105164727461 DEBUG: [ConfParameter] Hyperbolic Routing: 1
+20161105164727461 DEBUG: [ConfParameter] Hyp R: 123.456
+20161105164727461 DEBUG: [ConfParameter]  Hyp theta 0: 1.45 
+
+20161105164727461 DEBUG: [ConfParameter]  Hyp theta 1: 2.36 
+
+20161105164727461 DEBUG: [ConfParameter]  Hyp theta 2: 3.21 
+
+20161105164727461 DEBUG: [ConfParameter] Log Directory: /home/ashlesh/Projects/workshops/3rd-ndn-hackathon/nlsr-hr/log
+20161105164727461 DEBUG: [ConfParameter] Seq Directory: /home/ashlesh/Projects/workshops/3rd-ndn-hackathon/nlsr-hr/log
+20161105164727461 DEBUG: [ConfParameter] Adjacency LSA build interval:  5
+20161105164727461 DEBUG: [ConfParameter] First Hello Interest interval: 10
+20161105164727461 DEBUG: [ConfParameter] Routing calculation interval:  15
+20161105164727461 DEBUG: [AdjacencyList] -------Adjacency List--------
+20161105164727461 DEBUG: [Adjacent] Adjacent : /ndn/edu/memphis/%C1.Router/cs/castor
+20161105164727461 DEBUG: [Adjacent] Connecting FaceUri: udp://castor.cs.memphis.edu
+20161105164727461 DEBUG: [Adjacent] Link Cost: 25
+20161105164727461 DEBUG: [Adjacent] Status: 0
+20161105164727461 DEBUG: [Adjacent] Interest Timed out: 0
+20161105164727461 DEBUG: [Adjacent] Adjacent : /ndn/edu/memphis/%C1.Router/cs/mira
+20161105164727461 DEBUG: [Adjacent] Connecting FaceUri: udp://mira.cs.memphis.edu
+20161105164727461 DEBUG: [Adjacent] Link Cost: 30
+20161105164727461 DEBUG: [Adjacent] Status: 0
+20161105164727461 DEBUG: [Adjacent] Interest Timed out: 0
+20161105164727461 DEBUG: [NamePrefixList] -------Name Prefix List--------
+20161105164727461 DEBUG: [NamePrefixList] Name 1 : /ndn/edu/memphis/cs/netlab
+20161105164727462 DEBUG: [NamePrefixList] Name 2 : /ndn/edu/memphis/sports/basketball
+20161105164728738 DEBUG: [nlsr] Default NLSR identity: /ndn/edu/memphis/%C1.Router/cs/pollux/NLSR
+20161105164728738 DEBUG: [nlsr] Setting interest filter for name: /ndn/edu/memphis/%C1.Router/cs/pollux
+20161105164728745 DEBUG: [nlsr] Setting interest filter for name: /ndn/NLSR/LSA/edu/memphis/%C1.Router/cs/pollux
+20161105164728752 DEBUG: [Lsdb] New Name LSA
+20161105164728752 DEBUG: [Lsdb] Adding Name Lsa
+20161105164728752 DEBUG: [Lsa] Name Lsa: 
+20161105164728752 DEBUG: [Lsa]   Origination Router: /ndn/edu/memphis/%C1.Router/cs/pollux
+20161105164728752 DEBUG: [Lsa]   Ls Type: name
+20161105164728752 DEBUG: [Lsa]   Ls Seq No: 320
+20161105164728752 DEBUG: [Lsa]   Ls Lifetime: 1478389648752119954 nanoseconds since Jan 1, 1970
+20161105164728752 DEBUG: [Lsa]   Names: 
+20161105164728752 DEBUG: [Lsa]     Name 1: /ndn/edu/memphis/cs/netlab
+20161105164728752 DEBUG: [Lsa]     Name 1: /ndn/edu/memphis/sports/basketball
+20161105164728752 DEBUG: [Lsa] name_lsa_end
+20161105164728752 DEBUG: [SyncLogicHandler] Publishing Sync Update. Prefix: /ndn/NLSR/LSA/edu/memphis/%C1.Router/cs/pollux Seq No: 351844056432640
+20161105164728752 DEBUG: [Lsdb] New Coordinate LSA. Adding to LSDB
+20161105164728752 DEBUG: [Lsdb] Adding Coordinate Lsa
+20161105164728752 DEBUG: [Lsa] Cor Lsa: 
+20161105164728752 DEBUG: [Lsa]   Origination Router: /ndn/edu/memphis/%C1.Router/cs/pollux
+20161105164728752 DEBUG: [Lsa]   Ls Type: coordinate
+20161105164728752 DEBUG: [Lsa]   Ls Seq No: 320
+20161105164728752 DEBUG: [Lsa]   Ls Lifetime: 1478389648752441920 nanoseconds since Jan 1, 1970
+20161105164728752 DEBUG: [Lsa]     Hyperbolic Radius: 123.456
+20161105164728752 DEBUG: [Lsa]   Hyp theta 0: 1.45
+20161105164728752 DEBUG: [Lsa]   Hyp theta 1: 2.36
+20161105164728752 DEBUG: [Lsa]   Hyp theta 2: 3.21
+20161105164728753 DEBUG: [RoutingTable] Scheduling routing table calculation in 15 seconds
+20161105164728764 DEBUG: [HelloProtocol] Scheduling HELLO Interests in 10 seconds
+20161105164728775 DEBUG: [SyncLogic] addLocalNames (): old state 00
+20161105164728775 DEBUG: [SyncLogic] addLocalNames (): new state bb85473b70d14c330dc7bd0868538ef6161b6cfcc7ed79219bb475299fbd20e0
+20161105164728775 DEBUG: [SyncLogic] Satisfied 0 pending interests
+20161105164728775 DEBUG: [SyncLogic] sendSyncInterest
+20161105164728775 DEBUG: [SyncLogic] >> I /ndn/NLSR/sync/bb85473b70d14c330dc7bd0868538ef6161b6cfcc7ed79219bb475299fbd20e0
+20161105164728775 DEBUG: [SyncLogic] sendSyncInterest: /ndn/NLSR/sync/bb85473b70d14c330dc7bd0868538ef6161b6cfcc7ed79219bb475299fbd20e0
+20161105164728790 DEBUG: [Fib] Successfully set strategy choice: /localhost/nfd/strategy/multicast/%FD%01 for name: /ndn/NLSR/LSA
+20161105164728791 DEBUG: [Fib] Successfully set strategy choice: /localhost/nfd/strategy/multicast/%FD%01 for name: /ndn/broadcast/KEYS
+20161105164728794 DEBUG: [Fib] Successfully set strategy choice: /localhost/nfd/strategy/multicast/%FD%01 for name: /ndn/NLSR/sync
+20161105164728795 DEBUG: [SyncLogic] Sync prefix registration succeeded! /ndn/NLSR/sync
+20161105164728795 DEBUG: [nlsr] Successfully registered prefix: /ndn/edu/memphis/%C1.Router/cs/pollux
+20161105164728795 DEBUG: [LsdbDatasetInterestHandler] Setting interest filter for: /ndn/edu/memphis/%C1.Router/cs/pollux/lsdb
+20161105164728795 DEBUG: [nlsr] Successfully registered prefix: /ndn/NLSR/LSA/edu/memphis/%C1.Router/cs/pollux
+20161105164728800 DEBUG: [nlsr] Successfully registered prefix: /localhost/nlsr
+20161105164728800 DEBUG: [PrefixUpdateProcessor] Setting Interest filter for: /localhost/nlsr/prefix-update
+20161105164728800 DEBUG: [LsdbDatasetInterestHandler] Setting interest filter for: /localhost/nlsr/lsdb
+20161105164733171 DEBUG: [SyncLogic] sendSyncInterest
+20161105164733171 DEBUG: [SyncLogic] >> I /ndn/NLSR/sync/bb85473b70d14c330dc7bd0868538ef6161b6cfcc7ed79219bb475299fbd20e0
+20161105164733171 DEBUG: [SyncLogic] sendSyncInterest: /ndn/NLSR/sync/bb85473b70d14c330dc7bd0868538ef6161b6cfcc7ed79219bb475299fbd20e0
+20161105164737429 DEBUG: [SyncLogic] sendSyncInterest
+20161105164737429 DEBUG: [SyncLogic] >> I /ndn/NLSR/sync/bb85473b70d14c330dc7bd0868538ef6161b6cfcc7ed79219bb475299fbd20e0
+20161105164737429 DEBUG: [SyncLogic] sendSyncInterest: /ndn/NLSR/sync/bb85473b70d14c330dc7bd0868538ef6161b6cfcc7ed79219bb475299fbd20e0
+20161105164738765 DEBUG: [HelloProtocol] Scheduling HELLO Interests in 60 seconds
+20161105164738769 DEBUG: [FaceController] Converted udp://castor.cs.memphis.edu to canonical form: udp4://141.225.11.131:6363
+20161105164738769 DEBUG: [FaceController] Creating Face in NFD with face-uri: udp4://141.225.11.131:6363
+20161105164738789 DEBUG: [FaceController] Converted udp://mira.cs.memphis.edu to canonical form: udp4://141.225.8.92:6363
+20161105164738789 DEBUG: [FaceController] Creating Face in NFD with face-uri: udp4://141.225.8.92:6363
+20161105164738818 DEBUG: [Fib] Registering prefix: /ndn/NLSR/sync Face Uri: udp://castor.cs.memphis.edu Face Id: 275
+20161105164738825 DEBUG: [Fib] Registering prefix: /ndn/NLSR/LSA Face Uri: udp://castor.cs.memphis.edu Face Id: 275
+20161105164738830 DEBUG: [Fib] Registering prefix: /ndn/broadcast/KEYS Face Uri: udp://castor.cs.memphis.edu Face Id: 275
+20161105164738834 DEBUG: [HelloProtocol] Expressing Interest :/ndn/edu/memphis/%C1.Router/cs/castor/NLSR/INFO/%07%29%08%03ndn%08%03edu%08%07memphis%08%08%C1.Router%08%02cs%08%06pollux
+20161105164738835 DEBUG: [Fib] Registering prefix: /ndn/NLSR/sync Face Uri: udp://mira.cs.memphis.edu Face Id: 276
+20161105164738839 DEBUG: [Fib] Registering prefix: /ndn/NLSR/LSA Face Uri: udp://mira.cs.memphis.edu Face Id: 276
+20161105164738843 DEBUG: [Fib] Registering prefix: /ndn/broadcast/KEYS Face Uri: udp://mira.cs.memphis.edu Face Id: 276
+20161105164738847 DEBUG: [HelloProtocol] Expressing Interest :/ndn/edu/memphis/%C1.Router/cs/mira/NLSR/INFO/%07%29%08%03ndn%08%03edu%08%07memphis%08%08%C1.Router%08%02cs%08%06pollux
+20161105164738848 DEBUG: [Fib] Register successful Prefix: /ndn/NLSR/sync Face Uri: udp://castor.cs.memphis.edu
+20161105164738848 DEBUG: [FaceMap] ------- Face Map-----------
+20161105164738848 DEBUG: [FaceMap] Face Map Entry (FaceUri: udp://castor.cs.memphis.edu Face Id: 275)
+20161105164738849 DEBUG: [HelloProtocol] Interest timed out for Name: /ndn/edu/memphis/%C1.Router/cs/mira/NLSR/INFO/%07%29%08%03ndn%08%03edu%08%07memphis%08%08%C1.Router%08%02cs%08%06pollux
+20161105164738849 DEBUG: [HelloProtocol] Neighbor: /ndn/edu/memphis/%C1.Router/cs/mira
+20161105164738849 DEBUG: [HelloProtocol] Status: 0
+20161105164738849 DEBUG: [HelloProtocol] Info Interest Timed out: 1
+20161105164738849 DEBUG: [HelloProtocol] Expressing Interest :/ndn/edu/memphis/%C1.Router/cs/mira/NLSR/INFO/%07%29%08%03ndn%08%03edu%08%07memphis%08%08%C1.Router%08%02cs%08%06pollux
+20161105164738856 DEBUG: [Fib] Register successful Prefix: /ndn/NLSR/LSA Face Uri: udp://castor.cs.memphis.edu
+20161105164738856 DEBUG: [FaceMap] ------- Face Map-----------
+20161105164738857 DEBUG: [FaceMap] Face Map Entry (FaceUri: udp://castor.cs.memphis.edu Face Id: 275)
+20161105164738868 DEBUG: [Fib] Register successful Prefix: /ndn/broadcast/KEYS Face Uri: udp://castor.cs.memphis.edu
+20161105164738868 DEBUG: [FaceMap] ------- Face Map-----------
+20161105164738868 DEBUG: [FaceMap] Face Map Entry (FaceUri: udp://castor.cs.memphis.edu Face Id: 275)
+20161105164738872 DEBUG: [Fib] Register successful Prefix: /ndn/NLSR/sync Face Uri: udp://mira.cs.memphis.edu
+20161105164738872 DEBUG: [FaceMap] ------- Face Map-----------
+20161105164738872 DEBUG: [FaceMap] Face Map Entry (FaceUri: udp://castor.cs.memphis.edu Face Id: 275)
+20161105164738872 DEBUG: [FaceMap] Face Map Entry (FaceUri: udp://mira.cs.memphis.edu Face Id: 276)
+20161105164738872 DEBUG: [Fib] Register successful Prefix: /ndn/NLSR/LSA Face Uri: udp://mira.cs.memphis.edu
+20161105164738872 DEBUG: [FaceMap] ------- Face Map-----------
+20161105164738872 DEBUG: [FaceMap] Face Map Entry (FaceUri: udp://castor.cs.memphis.edu Face Id: 275)
+20161105164738872 DEBUG: [FaceMap] Face Map Entry (FaceUri: udp://mira.cs.memphis.edu Face Id: 276)
+20161105164738872 DEBUG: [Fib] Register successful Prefix: /ndn/broadcast/KEYS Face Uri: udp://mira.cs.memphis.edu
+20161105164738872 DEBUG: [FaceMap] ------- Face Map-----------
+20161105164738872 DEBUG: [FaceMap] Face Map Entry (FaceUri: udp://castor.cs.memphis.edu Face Id: 275)
+20161105164738872 DEBUG: [FaceMap] Face Map Entry (FaceUri: udp://mira.cs.memphis.edu Face Id: 276)
+20161105164738910 DEBUG: [nlsr] Face to /ndn/edu/memphis/%C1.Router/cs/mira with face id: 276 destroyed
+20161105164739835 DEBUG: [HelloProtocol] Interest timed out for Name: /ndn/edu/memphis/%C1.Router/cs/castor/NLSR/INFO/%07%29%08%03ndn%08%03edu%08%07memphis%08%08%C1.Router%08%02cs%08%06pollux
+20161105164739835 DEBUG: [HelloProtocol] Neighbor: /ndn/edu/memphis/%C1.Router/cs/castor
+20161105164739835 DEBUG: [HelloProtocol] Status: 0
+20161105164739835 DEBUG: [HelloProtocol] Info Interest Timed out: 1
+20161105164739835 DEBUG: [HelloProtocol] Expressing Interest :/ndn/edu/memphis/%C1.Router/cs/castor/NLSR/INFO/%07%29%08%03ndn%08%03edu%08%07memphis%08%08%C1.Router%08%02cs%08%06pollux
+20161105164739849 DEBUG: [HelloProtocol] Interest timed out for Name: /ndn/edu/memphis/%C1.Router/cs/mira/NLSR/INFO/%07%29%08%03ndn%08%03edu%08%07memphis%08%08%C1.Router%08%02cs%08%06pollux
+20161105164739849 DEBUG: [HelloProtocol] Neighbor: /ndn/edu/memphis/%C1.Router/cs/mira
+20161105164739849 DEBUG: [HelloProtocol] Status: 0
+20161105164739849 DEBUG: [HelloProtocol] Info Interest Timed out: 2
+20161105164739849 DEBUG: [HelloProtocol] Expressing Interest :/ndn/edu/memphis/%C1.Router/cs/mira/NLSR/INFO/%07%29%08%03ndn%08%03edu%08%07memphis%08%08%C1.Router%08%02cs%08%06pollux
+20161105164739861 DEBUG: [HelloProtocol] Interest timed out for Name: /ndn/edu/memphis/%C1.Router/cs/mira/NLSR/INFO/%07%29%08%03ndn%08%03edu%08%07memphis%08%08%C1.Router%08%02cs%08%06pollux
+20161105164739861 DEBUG: [HelloProtocol] Neighbor: /ndn/edu/memphis/%C1.Router/cs/mira
+20161105164739861 DEBUG: [HelloProtocol] Status: 0
+20161105164739861 DEBUG: [HelloProtocol] Info Interest Timed out: 3
+20161105164740835 DEBUG: [HelloProtocol] Interest timed out for Name: /ndn/edu/memphis/%C1.Router/cs/castor/NLSR/INFO/%07%29%08%03ndn%08%03edu%08%07memphis%08%08%C1.Router%08%02cs%08%06pollux
+20161105164740835 DEBUG: [HelloProtocol] Neighbor: /ndn/edu/memphis/%C1.Router/cs/castor
+20161105164740835 DEBUG: [HelloProtocol] Status: 0
+20161105164740835 DEBUG: [HelloProtocol] Info Interest Timed out: 2
+20161105164740836 DEBUG: [HelloProtocol] Expressing Interest :/ndn/edu/memphis/%C1.Router/cs/castor/NLSR/INFO/%07%29%08%03ndn%08%03edu%08%07memphis%08%08%C1.Router%08%02cs%08%06pollux
+20161105164741702 DEBUG: [SyncLogic] sendSyncInterest
+20161105164741702 DEBUG: [SyncLogic] >> I /ndn/NLSR/sync/bb85473b70d14c330dc7bd0868538ef6161b6cfcc7ed79219bb475299fbd20e0
+20161105164741702 DEBUG: [SyncLogic] sendSyncInterest: /ndn/NLSR/sync/bb85473b70d14c330dc7bd0868538ef6161b6cfcc7ed79219bb475299fbd20e0
+20161105164741836 DEBUG: [HelloProtocol] Interest timed out for Name: /ndn/edu/memphis/%C1.Router/cs/castor/NLSR/INFO/%07%29%08%03ndn%08%03edu%08%07memphis%08%08%C1.Router%08%02cs%08%06pollux
+20161105164741836 DEBUG: [HelloProtocol] Neighbor: /ndn/edu/memphis/%C1.Router/cs/castor
+20161105164741836 DEBUG: [HelloProtocol] Status: 0
+20161105164741836 DEBUG: [HelloProtocol] Info Interest Timed out: 3
+20161105164743753 DEBUG: [Lsdb] ---------------Cor LSDB-------------------
+20161105164743753 DEBUG: [Lsa] Cor Lsa: 
+20161105164743753 DEBUG: [Lsa]   Origination Router: /ndn/edu/memphis/%C1.Router/cs/pollux
+20161105164743753 DEBUG: [Lsa]   Ls Type: coordinate
+20161105164743753 DEBUG: [Lsa]   Ls Seq No: 320
+20161105164743753 DEBUG: [Lsa]   Ls Lifetime: 1478389648752441920 nanoseconds since Jan 1, 1970
+20161105164743753 DEBUG: [Lsa]     Hyperbolic Radius: 123.456
+20161105164743753 DEBUG: [Lsa]   Hyp theta 0: 1.45
+20161105164743753 DEBUG: [Lsa]   Hyp theta 1: 2.36
+20161105164743753 DEBUG: [Lsa]   Hyp theta 2: 3.21
+20161105164743753 DEBUG: [Lsdb] ---------------Name LSDB-------------------
+20161105164743753 DEBUG: [Lsa] Name Lsa: 
+20161105164743753 DEBUG: [Lsa]   Origination Router: /ndn/edu/memphis/%C1.Router/cs/pollux
+20161105164743753 DEBUG: [Lsa]   Ls Type: name
+20161105164743753 DEBUG: [Lsa]   Ls Seq No: 320
+20161105164743753 DEBUG: [Lsa]   Ls Lifetime: 1478389648752119954 nanoseconds since Jan 1, 1970
+20161105164743753 DEBUG: [Lsa]   Names: 
+20161105164743753 DEBUG: [Lsa]     Name 1: /ndn/edu/memphis/cs/netlab
+20161105164743753 DEBUG: [Lsa]     Name 1: /ndn/edu/memphis/sports/basketball
+20161105164743753 DEBUG: [Lsa] name_lsa_end
+20161105164743753 DEBUG: [Lsdb] ---------------Adj LSDB-------------------
+20161105164743753 DEBUG: [NamePrefixTable] ----------------NPT----------------------
+
+20161105164743753 DEBUG: [RoutingTable] Calculating routing table
+20161105164743753 DEBUG: [Map] ---------------Map----------------------
+20161105164743753 DEBUG: [Map] MapEntry: ( Router: /ndn/edu/memphis/%C1.Router/cs/pollux Mapping No: 0 )
+20161105164743753 DEBUG: [RoutingTable] Calling Update NPT With new Route
+20161105164743753 DEBUG: [NamePrefixTable] Updating table with newly calculated routes
+20161105164743753 DEBUG: [RoutingTable] ---------------Routing Table------------------
+20161105164743753 DEBUG: [NamePrefixTable] ----------------NPT----------------------
+
+20161105164743753 DEBUG: [Fib] -------------------FIB-----------------------------
+20161105165003039 DEBUG: [nlsr] Initializing Nlsr
+20161105165003039 DEBUG: [SequencingManager] Seq File Name: /home/ashlesh/Projects/workshops/3rd-ndn-hackathon/nlsr-hr/log/nlsrSeqNo.txt
+20161105165003039 DEBUG: [SyncLogicHandler] Creating Sync socket. Sync Prefix: /ndn/NLSR/sync
+20161105165003048 DEBUG: [ConfParameter] Router Name: /%C1.Router/cs/pollux
+20161105165003048 DEBUG: [ConfParameter] Site Name: /edu/memphis
+20161105165003048 DEBUG: [ConfParameter] Network: /ndn
+20161105165003048 DEBUG: [ConfParameter] Router Prefix: /ndn/edu/memphis/%C1.Router/cs/pollux
+20161105165003048 DEBUG: [ConfParameter] ChronoSync sync Prefix: /ndn/NLSR/sync
+20161105165003048 DEBUG: [ConfParameter] ChronoSync LSA prefix: /ndn/NLSR/LSA
+20161105165003048 DEBUG: [ConfParameter] Hello Interest retry number: 3
+20161105165003048 DEBUG: [ConfParameter] Hello Interest resend second: 1
+20161105165003048 DEBUG: [ConfParameter] Info Interest interval: 60
+20161105165003048 DEBUG: [ConfParameter] LSA refresh time: 1800
+20161105165003048 DEBUG: [ConfParameter] LSA Interest lifetime: 4 seconds
+20161105165003048 DEBUG: [ConfParameter] Router dead interval: 3600
+20161105165003048 DEBUG: [ConfParameter] Max Faces Per Prefix: 3
+20161105165003048 DEBUG: [ConfParameter] Hyperbolic Routing: 1
+20161105165003048 DEBUG: [ConfParameter] Hyp R: 123.456
+20161105165003048 DEBUG: [ConfParameter] Hyp theta 0: 1.45
+20161105165003048 DEBUG: [ConfParameter] Hyp theta 1: 2.36
+20161105165003048 DEBUG: [ConfParameter] Hyp theta 2: 3.21
+20161105165003048 DEBUG: [ConfParameter] Log Directory: /home/ashlesh/Projects/workshops/3rd-ndn-hackathon/nlsr-hr/log
+20161105165003048 DEBUG: [ConfParameter] Seq Directory: /home/ashlesh/Projects/workshops/3rd-ndn-hackathon/nlsr-hr/log
+20161105165003048 DEBUG: [ConfParameter] Adjacency LSA build interval:  5
+20161105165003048 DEBUG: [ConfParameter] First Hello Interest interval: 10
+20161105165003048 DEBUG: [ConfParameter] Routing calculation interval:  15
+20161105165003048 DEBUG: [AdjacencyList] -------Adjacency List--------
+20161105165003048 DEBUG: [Adjacent] Adjacent : /ndn/edu/memphis/%C1.Router/cs/castor
+20161105165003048 DEBUG: [Adjacent] Connecting FaceUri: udp://castor.cs.memphis.edu
+20161105165003048 DEBUG: [Adjacent] Link Cost: 25
+20161105165003048 DEBUG: [Adjacent] Status: 0
+20161105165003048 DEBUG: [Adjacent] Interest Timed out: 0
+20161105165003048 DEBUG: [Adjacent] Adjacent : /ndn/edu/memphis/%C1.Router/cs/mira
+20161105165003048 DEBUG: [Adjacent] Connecting FaceUri: udp://mira.cs.memphis.edu
+20161105165003048 DEBUG: [Adjacent] Link Cost: 30
+20161105165003048 DEBUG: [Adjacent] Status: 0
+20161105165003048 DEBUG: [Adjacent] Interest Timed out: 0
+20161105165003048 DEBUG: [NamePrefixList] -------Name Prefix List--------
+20161105165003048 DEBUG: [NamePrefixList] Name 1 : /ndn/edu/memphis/cs/netlab
+20161105165003048 DEBUG: [NamePrefixList] Name 2 : /ndn/edu/memphis/sports/basketball
+20161105165005521 DEBUG: [nlsr] Default NLSR identity: /ndn/edu/memphis/%C1.Router/cs/pollux/NLSR
+20161105165005521 DEBUG: [nlsr] Setting interest filter for name: /ndn/edu/memphis/%C1.Router/cs/pollux
+20161105165005528 DEBUG: [nlsr] Setting interest filter for name: /ndn/NLSR/LSA/edu/memphis/%C1.Router/cs/pollux
+20161105165005534 DEBUG: [Lsdb] New Name LSA
+20161105165005534 DEBUG: [Lsdb] Adding Name Lsa
+20161105165005534 DEBUG: [Lsa] Name Lsa: 
+20161105165005534 DEBUG: [Lsa]   Origination Router: /ndn/edu/memphis/%C1.Router/cs/pollux
+20161105165005534 DEBUG: [Lsa]   Ls Type: name
+20161105165005534 DEBUG: [Lsa]   Ls Seq No: 331
+20161105165005534 DEBUG: [Lsa]   Ls Lifetime: 1478389805534641607 nanoseconds since Jan 1, 1970
+20161105165005534 DEBUG: [Lsa]   Names: 
+20161105165005534 DEBUG: [Lsa]     Name 1: /ndn/edu/memphis/cs/netlab
+20161105165005534 DEBUG: [Lsa]     Name 1: /ndn/edu/memphis/sports/basketball
+20161105165005534 DEBUG: [Lsa] name_lsa_end
+20161105165005535 DEBUG: [SyncLogicHandler] Publishing Sync Update. Prefix: /ndn/NLSR/LSA/edu/memphis/%C1.Router/cs/pollux Seq No: 363938695872512
+20161105165005535 DEBUG: [Lsdb] New Coordinate LSA. Adding to LSDB
+20161105165005535 DEBUG: [Lsdb] Adding Coordinate Lsa
+20161105165005535 DEBUG: [Lsa] Cor Lsa: 
+20161105165005535 DEBUG: [Lsa]   Origination Router: /ndn/edu/memphis/%C1.Router/cs/pollux
+20161105165005535 DEBUG: [Lsa]   Ls Type: coordinate
+20161105165005535 DEBUG: [Lsa]   Ls Seq No: 331
+20161105165005535 DEBUG: [Lsa]   Ls Lifetime: 1478389805534980364 nanoseconds since Jan 1, 1970
+20161105165005535 DEBUG: [Lsa]     Hyperbolic Radius: 123.456
+20161105165005535 DEBUG: [Lsa]   Hyp theta 0: 1.45
+20161105165005535 DEBUG: [Lsa]   Hyp theta 1: 2.36
+20161105165005535 DEBUG: [Lsa]   Hyp theta 2: 3.21
+20161105165005535 DEBUG: [RoutingTable] Scheduling routing table calculation in 15 seconds
+20161105165005546 DEBUG: [HelloProtocol] Scheduling HELLO Interests in 10 seconds
+20161105165005552 DEBUG: [SyncLogic] addLocalNames (): old state 00
+20161105165005552 DEBUG: [SyncLogic] addLocalNames (): new state 48f5772b7714e1f77df3612e152c685957c68d008934234d6b568ed9b193d0ce
+20161105165005552 DEBUG: [SyncLogic] Satisfied 0 pending interests
+20161105165005552 DEBUG: [SyncLogic] sendSyncInterest
+20161105165005552 DEBUG: [SyncLogic] >> I /ndn/NLSR/sync/48f5772b7714e1f77df3612e152c685957c68d008934234d6b568ed9b193d0ce
+20161105165005552 DEBUG: [SyncLogic] sendSyncInterest: /ndn/NLSR/sync/48f5772b7714e1f77df3612e152c685957c68d008934234d6b568ed9b193d0ce
+20161105165005578 DEBUG: [Fib] Successfully set strategy choice: /localhost/nfd/strategy/multicast/%FD%01 for name: /ndn/NLSR/LSA
+20161105165005585 DEBUG: [Fib] Successfully set strategy choice: /localhost/nfd/strategy/multicast/%FD%01 for name: /ndn/broadcast/KEYS
+20161105165005586 DEBUG: [Fib] Successfully set strategy choice: /localhost/nfd/strategy/multicast/%FD%01 for name: /ndn/NLSR/sync
+20161105165005586 DEBUG: [SyncLogic] Sync prefix registration succeeded! /ndn/NLSR/sync
+20161105165005586 DEBUG: [nlsr] Successfully registered prefix: /ndn/edu/memphis/%C1.Router/cs/pollux
+20161105165005586 DEBUG: [LsdbDatasetInterestHandler] Setting interest filter for: /ndn/edu/memphis/%C1.Router/cs/pollux/lsdb
+20161105165005589 DEBUG: [nlsr] Successfully registered prefix: /ndn/NLSR/LSA/edu/memphis/%C1.Router/cs/pollux
+20161105165005598 DEBUG: [nlsr] Successfully registered prefix: /localhost/nlsr
+20161105165005598 DEBUG: [PrefixUpdateProcessor] Setting Interest filter for: /localhost/nlsr/prefix-update
+20161105165005598 DEBUG: [LsdbDatasetInterestHandler] Setting interest filter for: /localhost/nlsr/lsdb
+20161105165009680 DEBUG: [SyncLogic] sendSyncInterest
+20161105165009680 DEBUG: [SyncLogic] >> I /ndn/NLSR/sync/48f5772b7714e1f77df3612e152c685957c68d008934234d6b568ed9b193d0ce
+20161105165009680 DEBUG: [SyncLogic] sendSyncInterest: /ndn/NLSR/sync/48f5772b7714e1f77df3612e152c685957c68d008934234d6b568ed9b193d0ce
