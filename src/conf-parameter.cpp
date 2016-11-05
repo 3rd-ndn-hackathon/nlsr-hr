@@ -48,7 +48,7 @@ ConfParameter::writeLog()
   _LOG_DEBUG("Hyp R: " << m_corR);
   int i=0;
   for(auto const& value: m_corTheta) {
-    _LOG_DEBUG("Hyp theta " << i << ": "<< value);
+    _LOG_DEBUG("Hyp theta " << i << ": "<< value << " ");
     ++i;
   }
   _LOG_DEBUG("Log Directory: " << m_logDir);
