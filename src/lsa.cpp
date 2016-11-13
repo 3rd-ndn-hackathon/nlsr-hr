@@ -33,6 +33,7 @@
 #include "name-prefix-list.hpp"
 #include "adjacent.hpp"
 #include "logger.hpp"
+#include <typeinfo>
 
 
 namespace nlsr {
@@ -209,13 +210,25 @@ CoordinateLsa::initializeFromContent(const std::string& content)
     m_expirationTimePoint = ndn::time::fromIsoString(*tok_iter++);
     m_corRad   = boost::lexical_cast<double>(*tok_iter++);
 
-    for(; tok_iter != tokens.end(); *tok_iter++) {
-      //_LOG_ERROR(boost::lexical_cast<double>(*tok_iter));
+    while(tok_iter != tokens.end()) {
+      _LOG_ERROR(*tok_iter);
+      //double angle =
+      try
+      {
+          double value = std::stod(*tok_iter);
+      }
+      catch(std::exception& e)
+      {
+          //std::cout << "Could not convert string to double" << std::endl;
+          return true;
+      }
       m_angles.push_back(boost::lexical_cast<double>(*tok_iter));
+      tok_iter++;
     }
 
   }
   catch (std::exception& e) {
+    _LOG_ERROR("ldzjvnl");
     _LOG_ERROR(e.what());
     return false;
   }
